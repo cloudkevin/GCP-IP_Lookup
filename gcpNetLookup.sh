@@ -18,5 +18,5 @@ do
 	dig txt $LINE +short | tr " " "\n" 
 done | grep ip4 | cut -f 2 -d : | sort -n +0 +1 +2 +3 -t .
 
-# changing target to _spf.google.com for Google Apps mail servers.
-# changing it to _netblocks.google.com will get all the ip ranges google uses for its services.
+# change target to _spf.google.com for Google Apps mail servers.
+# change to _netblocks.google.com for all the ip ranges google uses for its services.

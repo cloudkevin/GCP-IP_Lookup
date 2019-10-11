@@ -1,6 +1,6 @@
 # GCP-IP_Lookup
 
-This will provide all of the IP addresses for GCP but can be easily modified to use for G Suite (refer to script comments)
+This will provide all of the IP addresses for GCP but can easily be modified to use for G Suite (refer to script comments)
 
 After downloading you need to make the script executable: `chmod 755 gcpNetLookup.sh`
 

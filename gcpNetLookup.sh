@@ -2,6 +2,8 @@
 
 # https://cloud.google.com/compute/docs/faq#find_ip_range
 # nslookup -q=TXT _cloud-netblocks.googleusercontent.com  8.8.8.8
+# changing target to _spf.google.com for Google Apps mail servers.
+# changing it to _netblocks.google.com will get all the ip ranges google uses for its services.
 
 myarray=()
 for LINE in `dig txt _cloud-netblocks.googleusercontent.com +short | tr " " "\n" | grep include | cut -f 2 -d :`
@@ -18,5 +20,4 @@ do
 	dig txt $LINE +short | tr " " "\n" 
 done | grep ip4 | cut -f 2 -d : | sort -n +0 +1 +2 +3 -t .
 
-# change target to _spf.google.com for Google Apps mail servers.
-# change to _netblocks.google.com for all the ip ranges google uses for its services.
+
